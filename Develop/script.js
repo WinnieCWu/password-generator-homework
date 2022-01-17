@@ -34,26 +34,38 @@ function writePassword() {
   passwordText.value = password;
 
   //**how to capture responses to Yes, and input values, to combine with PW generator **//
-  window.prompt('Would you like to include a lowercase character?')
-  if (window.confirm === "yes"){
-    window.prompt('Please enter at least one lowercase character');
-    console.log(passwordText.value);
+  var wantsLowerCase = window.confirm('Do you want lowercase character?')
+
+  if (wantsLowerCase){
+
   }
-  window.prompt('Would you like to include an uppercase character?')
-  if (window.prompt === "yes"){
-    window.prompt('Please enter at least one uppercase character');
-    console.log(password.value);
+
+  var wantsUpperCase = window.confirm('Would you like to include an uppercase character?')
+  if (wantsUpperCase){
+   
   }
-  window.prompt('Would you like to include a numeric character?')
-  if (window.prompt === "yes"){
-    window.prompt('Please enter at least one numeric character');
-    console.log(password);
+
+  var wantsNumericValue = window.confirm('Would you like to include a numeric character?')
+  if (wantsNumericValue){
+
   }
-  window.prompt('Would you like to include a special character?')
-  if (window.prompt === "yes"){
-    window.prompt('Please enter at least one special character');
-    console.log(passwordInput.value);
+
+  var wantsSpecialCharacter = window.confirm('Would you like to include a special character?')
+  if (wantsSpecialCharacter){
+    
   }
+
+  var approvedChar ='';
+  var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if (wantsUppercase){
+    approvedChar += uppercase;
+  }
+
+  //build the pw using for loop.
+  //will need random number via random index for approvedChar + password
+   
+  //var password = ''
+  //password += randomCharacter
 
   //when pw is generated, it's either displayed in an alert or written on the page
   window.alert("Your new password is " + password + " !");
