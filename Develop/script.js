@@ -40,37 +40,35 @@ function writePassword() {
   var numericValue = '0123456789';
   var specialCharacter = `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`;
 
-  var wantsLowerCase = window.confirm('Do you want lowercase character?')
+  var wantsLowerCase = window.confirm('Do you want lowercase character?');
   if (wantsLowerCase){
     approvedChar += lowerCase;
-  }
+  };
 
-  var wantsUpperCase = window.confirm('Would you like to include an uppercase character?')
-    if (wantsUppercase){
+  var wantsUpperCase = window.confirm('Would you like to include an uppercase character?');
+    if (wantsUpperCase){
       approvedChar += upperCase;
-    }
+  };
 
-  var wantsNumericValue = window.confirm('Would you like to include a numeric character?')
+  var wantsNumericValue = window.confirm('Would you like to include a numeric character?');
   if (wantsNumericValue){
       approvedChar += numericValue;
-  }
+  };
 
-  var wantsSpecialCharacter = window.confirm('Would you like to include a special character?')
+  var wantsSpecialCharacter = window.confirm('Would you like to include a special character?');
   if (wantsSpecialCharacter){
       approvedChar += specialCharacter;
-  }
+  };
 
-//for (i=0, i < approvedChar.length; i++){
-  //password += approvedChar[i] [//RANDOM CHARACTER]
 
+for (let i = 0; i < approvedChar.length; i++) {
+  password += approvedChar[i] + "";
 }
-  //build the pw using for loop.
-  //will need random number via random index for approvedChar + password
-   
 
-  //when pw is generated, it's either displayed in an alert or written on the page
-  window.alert("Your new password is " + password + " !");
-}
+
+//when pw is generated, it's either displayed in an alert or written on the page
+window.alert("Your new password is " + password + " !");
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
