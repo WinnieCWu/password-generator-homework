@@ -34,38 +34,39 @@ function writePassword() {
   passwordText.value = password;
 
   //**how to capture responses to Yes, and input values, to combine with PW generator **//
+  var approvedChar ='';
+  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var numericValue = '0123456789';
+  var specialCharacter = `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`;
+
   var wantsLowerCase = window.confirm('Do you want lowercase character?')
-
   if (wantsLowerCase){
-
+    approvedChar += lowerCase;
   }
 
   var wantsUpperCase = window.confirm('Would you like to include an uppercase character?')
-  if (wantsUpperCase){
-   
-  }
+    if (wantsUppercase){
+      approvedChar += upperCase;
+    }
 
   var wantsNumericValue = window.confirm('Would you like to include a numeric character?')
   if (wantsNumericValue){
-
+      approvedChar += numericValue;
   }
 
   var wantsSpecialCharacter = window.confirm('Would you like to include a special character?')
   if (wantsSpecialCharacter){
-    
+      approvedChar += specialCharacter;
   }
 
-  var approvedChar ='';
-  var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  if (wantsUppercase){
-    approvedChar += uppercase;
-  }
+//for (i=0, i < approvedChar.length; i++){
+  //password += approvedChar[i] [//RANDOM CHARACTER]
 
+}
   //build the pw using for loop.
   //will need random number via random index for approvedChar + password
    
-  //var password = ''
-  //password += randomCharacter
 
   //when pw is generated, it's either displayed in an alert or written on the page
   window.alert("Your new password is " + password + " !");
