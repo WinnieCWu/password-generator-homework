@@ -60,17 +60,14 @@ function writePassword() {
       approvedChar += specialCharacter;
   };
 
-
 for (let i = 0; i < approvedChar.length; i++) {
   password += approvedChar[i] + "";
+  console.log(approvedChar);
 }
-
 
 //when pw is generated, it's either displayed in an alert or written on the page
 window.alert("Your new password is " + password + " !");
 
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
+}
