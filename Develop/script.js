@@ -21,6 +21,12 @@ function generatePassword() {
   return passwordLength;
 }
 
+var approvedChar ='';
+var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+var numericValue = '0123456789';
+var specialCharacter = `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`;
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -34,11 +40,6 @@ function writePassword() {
   passwordText.value = password;
 
   //**how to capture responses to Yes, and input values, to combine with PW generator **//
-  var approvedChar ='';
-  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-  var numericValue = '0123456789';
-  var specialCharacter = `!"#$%&'()*+,-./:;<=>?@[\]^_{|}~`;
 
   var wantsLowerCase = window.confirm('Do you want lowercase character?');
   if (wantsLowerCase){
@@ -62,7 +63,7 @@ function writePassword() {
 
 for (let i = 0; i < approvedChar.length; i++) {
   password += approvedChar[i] + "";
-  console.log(approvedChar);
+  console.log(approvedChar[i]);
 }
 
 //when pw is generated, it's either displayed in an alert or written on the page
