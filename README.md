@@ -9,14 +9,16 @@ This password generator app runs in the browser, featuring HTML and CSS powered 
 2a) If yes, pull from the provided list of approved characters to add to the generated password, with at least one of each character type.
 
 ## What it looks like
-![pw_generator_screenshot](https://user-images.githubusercontent.com/95206117/175462550-eac84f65-ef92-49ba-9530-2cfd6790b242.JPG)
-![pw_generator_screenshot2](https://user-images.githubusercontent.com/95206117/175462552-582a295b-4c8f-4233-9adf-256785513b03.JPG)
+Homepage of app:
+![pw_generator_screenshot](https://user-images.githubusercontent.com/95206117/175463118-2f8b9c34-b2ee-49db-9d82-db4674d5b86a.JPG)
+What it looks like after responding to prompts:
+![pw_generator_screenshot2](https://user-images.githubusercontent.com/95206117/175463119-2262b7d1-a652-49b2-9d7b-a26a4f7117ac.JPG)
 
 ## Website 
 Feel free to check out the app yourself at https://winniecwu.github.io/password-generator-homework/
 
 ## Contribution
-Made with ❤️ by Winnie Wu & starter code from thh friendly-parakeet
+Made with ❤️ by Winnie Wu & starter code from the friendly-parakeet
 
 
 
